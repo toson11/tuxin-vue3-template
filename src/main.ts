@@ -1,17 +1,17 @@
+/*
+ * @Author: longtuxin
+ * @LastEditors: longtuxin
+ * @LastEditTime: 2024-09-27 15:28:37
+ * @FilePath: /tuxin-vue3-template/src/main.ts
+ * @Description: 头部注释
+ */
 import App from "./App.vue";
 import router from "./router";
 import { setupStore } from "@/store";
-import { useI18n } from "@/plugins/i18n";
 import { getPlatformConfig } from "./config";
-import { MotionPlugin } from "@vueuse/motion";
-import { useEcharts } from "@/plugins/echarts";
 import { createApp, type Directive } from "vue";
-import { useVxeTable } from "@/plugins/vxeTable";
-import { useElementPlus } from "@/plugins/elementPlus";
 import { injectResponsiveStorage } from "@/utils/responsive";
-
-import Table from "@pureadmin/table";
-import PureDescriptions from "@pureadmin/descriptions";
+import initPlugins from "./plugins";
 
 // 引入重置样式
 import "./style/reset.scss";
@@ -32,22 +32,6 @@ Object.keys(directives).forEach(key => {
   app.directive(key, (directives as { [key: string]: Directive })[key]);
 });
 
-// 全局注册@iconify/vue图标库
-import {
-  IconifyIconOffline,
-  IconifyIconOnline,
-  FontIcon
-} from "./components/ReIcon";
-app.component("IconifyIconOffline", IconifyIconOffline);
-app.component("IconifyIconOnline", IconifyIconOnline);
-app.component("FontIcon", FontIcon);
-
-// 全局注册按钮级别权限组件
-import { Auth } from "@/components/ReAuth";
-import { Perms } from "@/components/RePerms";
-app.component("Auth", Auth);
-app.component("Perms", Perms);
-
 // 全局注册vue-tippy
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
@@ -59,13 +43,6 @@ getPlatformConfig(app).then(async config => {
   app.use(router);
   await router.isReady();
   injectResponsiveStorage(app, config);
-  app
-    .use(MotionPlugin)
-    .use(useI18n)
-    .use(useElementPlus)
-    .use(Table)
-    .use(useVxeTable)
-    .use(PureDescriptions)
-    .use(useEcharts);
+  initPlugins(app); // 初始化插件
   app.mount("#app");
 });

@@ -28,17 +28,17 @@ defineOptions({
         </el-link>
       </template>
       <el-space wrap>
-        <Perms value="permission:btn:add">
+        <BasePerms value="permission:btn:add">
           <el-button plain type="warning">
             拥有code：'permission:btn:add' 权限可见
           </el-button>
-        </Perms>
-        <Perms :value="['permission:btn:edit']">
+        </BasePerms>
+        <BasePerms :value="['permission:btn:edit']">
           <el-button plain type="primary">
             拥有code：['permission:btn:edit'] 权限可见
           </el-button>
-        </Perms>
-        <Perms
+        </BasePerms>
+        <BasePerms
           :value="[
             'permission:btn:add',
             'permission:btn:edit',
@@ -49,7 +49,7 @@ defineOptions({
             拥有code：['permission:btn:add', 'permission:btn:edit',
             'permission:btn:delete'] 权限可见
           </el-button>
-        </Perms>
+        </BasePerms>
       </el-space>
     </el-card>
 

@@ -22,17 +22,17 @@ defineOptions({
         </el-link>
       </template>
       <el-space wrap>
-        <Auth value="permission:btn:add">
+        <BaseAuth value="permission:btn:add">
           <el-button plain type="warning">
             拥有code：'permission:btn:add' 权限可见
           </el-button>
-        </Auth>
-        <Auth :value="['permission:btn:edit']">
+        </BaseAuth>
+        <BaseAuth :value="['permission:btn:edit']">
           <el-button plain type="primary">
             拥有code：['permission:btn:edit'] 权限可见
           </el-button>
-        </Auth>
-        <Auth
+        </BaseAuth>
+        <BaseAuth
           :value="[
             'permission:btn:add',
             'permission:btn:edit',
@@ -43,7 +43,7 @@ defineOptions({
             拥有code：['permission:btn:add', 'permission:btn:edit',
             'permission:btn:delete'] 权限可见
           </el-button>
-        </Auth>
+        </BaseAuth>
       </el-space>
     </el-card>
 

@@ -6,8 +6,9 @@ declare module "vue" {
     IconifyIconOffline: (typeof import("../src/components/ReIcon"))["IconifyIconOffline"];
     IconifyIconOnline: (typeof import("../src/components/ReIcon"))["IconifyIconOnline"];
     FontIcon: (typeof import("../src/components/ReIcon"))["FontIcon"];
-    Auth: (typeof import("../src/components/ReAuth"))["Auth"];
-    Perms: (typeof import("../src/components/RePerms"))["Perms"];
+    BaseAuth: (typeof import("../src/components/base/BaseAuth"))["Auth"];
+    BasePerms: (typeof import("../src/components/base/BasePerms"))["Perms"];
+    BasePageContent: (typeof import("../src/components/base/BasePageContent.vue"))["default"];
   }
 }
 

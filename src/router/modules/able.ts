@@ -11,6 +11,14 @@ export default {
   },
   children: [
     {
+      path: "/able/canvas",
+      name: "AbleCanvas",
+      component: () => import("@/views/able/canvas.vue"),
+      meta: {
+        title: $t("menus.canvas")
+      }
+    },
+    {
       path: "/able/mqtt-client",
       name: "MqttClient",
       component: () => import("@/views/able/mqtt-client.vue"),

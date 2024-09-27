@@ -130,6 +130,7 @@ menus:
   pureTabs: 标签页操作
   pureGuide: 引导页
   pureAble: 功能
+  canvas: canvas画图
   pureMenuTree: 菜单树结构
   pureVideoFrame: 视频帧截取-wasm版
   pureWavesurfer: 音频可视化
