@@ -1,3 +1,10 @@
+/*
+ * @Author: longtuxin
+ * @LastEditors: longtuxin
+ * @LastEditTime: 2024-09-29 11:13:34
+ * @FilePath: /tuxin-vue3-template/build/plugins.ts
+ * @Description: 头部注释
+ */
 import { cdn } from "./cdn";
 import vue from "@vitejs/plugin-vue";
 import { pathResolve } from "./utils";
@@ -15,6 +22,7 @@ import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 // import { genScssMultipleScopeVars } from "../src/layout/theme";
 import { vitePluginFakeServer } from "vite-plugin-fake-server";
 import { createHtmlPlugin } from "vite-plugin-html";
+import Markdown from "vite-plugin-md";
 import pkg from "../package.json";
 
 export function getPlugins(
@@ -30,7 +38,10 @@ export function getPlugins(
         }
       }
     }),
-    vue(),
+    Markdown(),
+    vue({
+      include: [/\.vue$/, /\.md$/] // 支持 .vue 和 .md 文件
+    }),
     // jsx、tsx语法支持
     vueJsx(),
     VueI18nPlugin({

@@ -1,0 +1,7 @@
+- `line-clamp-3`: 指定行省略
+- `truncate`：但行省略
+- `divide-y divide-gray-200`：子元素间的分割线
+- `space-y-4`：子元素间的间距
+- `animate-bounce`：自定义动画，如 `animate-spin` 、`animate-pulse`
+- `aspect-w-16 aspect-h-9`：控制元素宽高比
+- `backdrop-filter backdrop-blur-md`：控制覆盖层演示，实现模糊、蒙层等效果

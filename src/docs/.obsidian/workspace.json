@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "05369e03d0ebccad",
+    "type": "split",
+    "children": [
+      {
+        "id": "f711a2472a040947",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48f58f35cf1fa1a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端-解决方案/安全性.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1b3acd65d0604446",
+    "type": "split",
+    "children": [
+      {
+        "id": "3dc6eb3c88bf18ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f2a1d016f4f45bb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "081caed7a3522e2f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bb29097bf030ee7f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "57f3eb23b3725796",
+    "type": "split",
+    "children": [
+      {
+        "id": "35edceb97ea9f4f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "780b4c53a7c3a9fe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "前端-解决方案/安全性.md"
+              }
+            }
+          },
+          {
+            "id": "e04a82705ff99e9e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "前端-解决方案/安全性.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "532adc577c74b62f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "前端-解决方案/安全性.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f59ce58191dea414",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "templates:插入模板": false
+    }
+  },
+  "active": "48f58f35cf1fa1a2",
+  "lastOpenFiles": [
+    "前端-解决方案/Mock请求.md",
+    "前端-解决方案/自定义主题.md",
+    "前端-解决方案/微前端.md",
+    "前端-解决方案/图标.md",
+    "前端-解决方案/升级公告与刷新通知.md",
+    "前端-解决方案/权限.md",
+    "前端-解决方案/灰度发布.md",
+    "前端-解决方案/国际化.md",
+    "前端-解决方案/登录验证.md",
+    "前端-解决方案/错误监控.md",
+    "前端-解决方案/安全性.md",
+    "前端-多端应用/微信小程序.md",
+    "前端-多端应用/Uniapp.md",
+    "Typescript.md",
+    "简历1.0.md",
+    "前端-项目管理/项目常见功能.md",
+    "前端-项目管理/项目部署.md",
+    "编程思维/抽象的艺术.md",
+    "前端-工程化&性能优化/Package.json.md",
+    "前端-Vue/代码设计-vue3组件封装.md",
+    "编程思维/设计模式.md",
+    "编程思维",
+    "前端-项目管理/3-前端项目管理.md",
+    "前端-项目管理/2-技术选型.md",
+    "前端-项目管理/1-项目需求.md",
+    "后端-数据库/Redis-简介.md",
+    "后端-数据库/Redis-使用指南.md",
+    "后端-数据库/数据库设计.png",
+    "后端-Python",
+    "前端-Vue",
+    "前端-工程化&性能优化/打包工具",
+    "前端用户体验/动效-v-motion",
+    "前端-用户体验",
+    "架构/未命名",
+    "前端-工程化&性能优化",
+    "前端-解决方案",
+    "工具&效率",
+    "node-server/app/public/uploads/455c555c04f1567f2d96d4d00.png",
+    "node-server/app/public/uploads/aedfaaeb9b113434aa82fe002.jpg",
+    "node-server/app/public/uploads/aedfaaeb9b113434aa82fe000.png",
+    "node-server/app/public/uploads/aedfaaeb9b113434aa82fe001.png",
+    "node-server/app/public/uploads/9331071f5a70f066752255000.png",
+    "node-server/app/public/uploads/0b76ab3233a416f6d14dfd702.png",
+    "server/app/public/uploads/0b76ab3233a416f6d14dfd702.png",
+    "未命名.canvas"
+  ]
+}

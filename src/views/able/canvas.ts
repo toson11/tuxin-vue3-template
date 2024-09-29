@@ -1,3 +1,10 @@
+/*
+ * @Author: longtuxin
+ * @LastEditors: longtuxin
+ * @LastEditTime: 2024-09-29 18:56:59
+ * @FilePath: /tuxin-vue3-template/src/views/able/canvas.ts
+ * @Description: 头部注释
+ */
 export function getGridCanvas(
   ctx,
   {
@@ -41,4 +48,95 @@ export function getGridCanvas(
     }
   }
   return offscreenCanvas;
+}
+
+export class Rect {
+  dpr: number;
+  public startX: number;
+  public startY: number;
+  public endX: number;
+  public endY: number;
+  public color: string;
+  public minWidth: number;
+  public minHeight: number;
+  constructor({
+    startX,
+    startY,
+    endX,
+    endY,
+    color = "red",
+    minWidth = 10,
+    minHeight = 10
+  }: {
+    startX: number;
+    startY: number;
+    endX: number;
+    endY: number;
+    color?: string;
+    minWidth?: number;
+    minHeight?: number;
+  }) {
+    this.dpr = window.devicePixelRatio || 1;
+    this.startX = startX * this.dpr;
+    this.startY = startY * this.dpr;
+    this.endX = endX * this.dpr;
+    this.endY = endY * this.dpr;
+    this.color = color;
+    this.minWidth = minWidth * this.dpr;
+    this.minHeight = minHeight * this.dpr;
+  }
+
+  get minX() {
+    return this.startX < this.endX ? this.startX : this.endX;
+  }
+
+  get maxX() {
+    return this.startX > this.endX ? this.startX : this.endX;
+  }
+
+  get minY() {
+    return this.startY < this.endY ? this.startY : this.endY;
+  }
+
+  get maxY() {
+    return this.startY > this.endY ? this.startY : this.endY;
+  }
+
+  isOverlap(e: MouseEvent) {
+    const mouseX = e.offsetX * this.dpr,
+      mouseY = e.offsetY * this.dpr;
+    return (
+      mouseX >= this.minX &&
+      mouseX <= this.maxX &&
+      mouseY >= this.minY &&
+      mouseY <= this.maxY
+    );
+  }
+
+  draw(ctx: CanvasRenderingContext2D) {
+    ctx.fillStyle = this.color;
+    const width = this.maxX - this.minX,
+      height = this.maxY - this.minY,
+      startX =
+        this.startX > this.endX && width < this.minWidth
+          ? this.startX - this.minWidth
+          : this.minX,
+      startY =
+        this.startY > this.endY && height < this.minHeight
+          ? this.startY - this.minHeight
+          : this.minY;
+    ctx.fillRect(
+      startX,
+      startY,
+      // 限制最小宽高
+      width > this.minWidth ? width : this.minWidth,
+      height > this.minHeight ? height : this.minHeight
+    );
+    // 添加文案
+    const text = `x: ${this.minX}px
+    y: ${this.minY}px
+    w" ${this.maxX - this.minX}px
+    h: ${this.maxY - this.minY}px`;
+    ctx.fillText(text, this.minX, this.minY - 10);
+  }
 }
